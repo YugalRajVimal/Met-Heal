@@ -108,17 +108,29 @@ export default function HeroSection() {
                 transition={{ duration: 1 }}
                 className="absolute inset-0 flex items-center justify-start px-6 md:px-16"
               >
-                <div className="backdrop-blur-md bg-white/10 p-6 md:p-10 rounded-2xl max-w-3xl text-left text-white">
+                 <div className="backdrop-blur-md bg-white/10 p-6 md:p-10 rounded-2xl max-w-3xl text-left text-white">
                   {/* Main Title */}
-                  <h1 className="text-3xl md:text-5xl font-bold text-white mb-5">
+                  <h1
+                    className="text-3xl md:text-5xl font-bold mb-5"
+                    style={{ color: "#00A86A" }}
+                  >
                     {slide.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-lg md:text-xl mb-6 text-white/90">{slide.description}</p>
+                  <p className="text-lg md:text-xl mb-6" style={{ color: "#75BC84" }}>
+                    {slide.description}
+                  </p>
 
-                  {/* Call-to-Action Button */}
-                  <button className="bg-[#7367F0] hover:bg-[#6157d9] text-white font-medium px-6 py-3 rounded-xl transition mt-4 shadow-lg">
+                  {/* Call-to-Action Button with green branding */}
+                  <button
+                    className="font-medium px-6 py-3 rounded-xl transition mt-4 shadow-lg"
+                    style={{
+                      background: "linear-gradient(90deg, #00A86A 0%, #75BC84 100%)",
+                      color: "#fff",
+                      border: "none",
+                    }}
+                  >
                     Enquire Now
                   </button>
                 </div>

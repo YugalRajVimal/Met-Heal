@@ -19,7 +19,6 @@ const OUR_SERVICES = [
       "Which diagnostic lab gives the most reliable and accurate tests",
       "Treatment guidance for various medical conditions",
       "Second-opinion support for patients and families"
-      // Only 5 features here (already ≤ 6)
     ],
   },
   {
@@ -35,7 +34,6 @@ const OUR_SERVICES = [
       "Taking patients safely for Dialysis",
       "Taking patients for Chemotherapy",
       "Help with MRI, CT Scan, Ultrasound, X-ray & other imaging"
-      // Now only 6 features, per instructions
     ],
   },
   {
@@ -48,7 +46,6 @@ const OUR_SERVICES = [
       "Help with hospital billing & admission formalities",
       "Managing discharge processes",
       "Coordinating follow-up visits"
-      // Only 4 features (already ≤ 6)
     ],
   },
   {
@@ -61,7 +58,6 @@ const OUR_SERVICES = [
       "Safe transportation to hospital, lab, or clinic",
       "Waiting-area supervision",
       "Drop back home after completion of the visit or procedure"
-      // Only 4 features (already ≤ 6)
     ],
   },
 ];
@@ -82,13 +78,13 @@ export default function OurServices() {
           animate="visible"
           className="mb-12"
         >
-          <span className="inline-block bg-gray-100 text-[#7367F0] px-5 py-1.5 rounded-full font-medium text-sm mb-4">
+          <span className="inline-block bg-gray-100 text-[#00A86A] px-5 py-1.5 rounded-full font-medium text-sm mb-4">
             ✅ Our Services
           </span>
           <h2 className="text-3xl md:text-5xl font-semibold text-[#0D0D25]">
             We Simplify Medical Journeys
             <br />
-            <span className="italic text-[#7367F0] font-medium">
+            <span className="italic text-[#75BC84] font-medium">
               End-to-End Patient Support
             </span>
           </h2>
@@ -106,8 +102,8 @@ export default function OurServices() {
               // Set a consistent card height for all cards
               className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 text-left flex flex-col h-full "
             >
-              <div className="flex items-center gap-4 bg-[#7367F0] p-4 rounded-t-3xl shadow">
-                <div className="bg-[#7367F0] p-3 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex items-center gap-4 bg-[#00A86A] p-4 rounded-t-3xl shadow">
+                <div className="bg-[#75BC84] p-3 rounded-xl flex items-center justify-center shadow-lg">
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-semibold text-white">{service.title}</h3>

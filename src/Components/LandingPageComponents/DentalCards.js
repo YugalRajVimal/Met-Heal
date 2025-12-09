@@ -15,7 +15,7 @@ const cards = [
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="28" fill="none" />
-        <text x="17" y="37" fontSize="14" fill="#7a80fa">🧑‍🤝‍🧑</text>
+        <text x="17" y="37" fontSize="14" fill="#00A86A">🧑‍🤝‍🧑</text>
       </svg>
     ),
     active: true,
@@ -41,7 +41,7 @@ export default function DentalCards() {
             key={card.title}
             className={`relative flex flex-col p-8 rounded-[40px] border ${
               card.active
-                ? "bg-[#7a80fa] border-[#7a80fa] text-white shadow-xl"
+                ? "bg-[#75BC84] border-[#75BC84] text-white shadow-xl"
                 : "bg-white border-gray-100 text-[#162146] shadow"
             } transition-colors duration-200`}
           >
@@ -55,14 +55,14 @@ export default function DentalCards() {
             {/* Number badge */}
             <div className={`absolute bottom-0 right-6 transform translate-y-1/2`}>
               <span className={`inline-flex items-center justify-center rounded-full bg-gray-100 
-                ${card.active ? "bg-[#f5f6fb] text-[#7a80fa]" : "text-[#162146]"} 
+                ${card.active ? "bg-[#BCDFCE] text-[#00A86A]" : "text-[#162146]"} 
                 font-bold text-xl w-14 h-14`}>
                 {String(i + 1).padStart(2, "0")}
               </span>
             </div>
             {/* Unique shape for active card */}
             {card.active && (
-              <span className="absolute -bottom-7 left-6 w-24 h-16 rounded-b-[40px] bg-[#7a80fa] blur-md opacity-40"></span>
+              <span className="absolute -bottom-7 left-6 w-24 h-16 rounded-b-[40px] bg-[#75BC84] blur-md opacity-40"></span>
             )}
           </div>
         ))}

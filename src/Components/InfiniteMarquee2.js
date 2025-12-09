@@ -34,7 +34,7 @@ function InfiniteMarquee2() {
         }}
         transition={{
           ease: "linear",
-          duration: 100,
+          duration: 300,
           repeat: Infinity,
         }}
         ref={marqueeRef}
@@ -49,7 +49,10 @@ function InfiniteMarquee2() {
               >
                 <span className="">{word}</span>
                 {idx !== words.length - 1 && (
-                  <span className="mx-16 text-4xl text-[#162146] flex items-center">
+                  <span
+                    className="mx-16 text-4xl flex items-center"
+                 
+                  >
                     <FaRegStar size={36} />
                   </span>
                 )}

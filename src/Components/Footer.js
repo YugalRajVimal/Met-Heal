@@ -32,7 +32,7 @@ const SERVICES_LIST = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-[#0b617e] via-[#0b1e3b] via-50% to-[#d77660] to-100% pt-20 pb-0 px-4 md:px-0">
+    <footer className="relative bg-gradient-to-br from-[#75BC84] via-[#00A86A] via-50% to-[#BCDFCE] to-100% pt-20 pb-0 px-4 md:px-0">
       <div className="mx-auto rounded-3xl overflow-visible pb-10">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 px-8 py-12">
           {/* Left CARD */}
@@ -43,7 +43,7 @@ export default function Footer() {
                 alt="Met Heal Logo"
                 className="w-20 h-20 object-cover rounded-xl"
               />
-              <span className="text-[#0b1e3b] text-3xl font-semibold">
+              <span className="text-[#00A86A] text-3xl font-semibold">
                 Met Heal
               </span>
             </div>
@@ -51,7 +51,7 @@ export default function Footer() {
               We are dedicated to providing flexible & accessible healthcare
               services.
             </p>
-            <div className="pt-2 border-t border-gray-200 text-sm text-[#101a38] space-y-2">
+            <div className="pt-2 border-t border-[#BCDFCE] text-sm text-[#00A86A] space-y-2">
               <div className="flex justify-between pt-2">
                 <span className="font-medium">Mon - Fri</span>
                 <span>9:00 - 18:00</span>
@@ -104,7 +104,7 @@ export default function Footer() {
             </div>
             {/* Newsletter */}
             <div>
-              <h3 className="text-white font-semibold text-xl mb-4">Newsletter</h3>
+              <h3 className="text-[#00A86A] font-semibold text-xl mb-4">Newsletter</h3>
               <p className="text-white text-base mb-4">
                 Join the Community and Receive Our Monthly Newsletter Straight
                 to Your Inbox
@@ -117,7 +117,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-[#02acca] rounded-r-lg px-4 flex items-center justify-center"
+                  className="bg-[#00A86A] rounded-r-lg px-4 flex items-center justify-center"
                 >
                   {/* Send icon */}
                   <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
@@ -129,24 +129,25 @@ export default function Footer() {
           </div>
         </div>
         {/* Footer bottom mini-links */}
-        <div className="flex flex-col md:flex-row md:items-center justify-center md:justify-evenly py-4 bg-transparent gap-5 border-t border-[#202b4c] px-8">
+        <div className="flex flex-col md:flex-row md:items-center justify-center md:justify-evenly py-4 bg-transparent gap-5 border-t border-[#75BC84] px-8">
           <div className="flex items-center gap-2 text-white">
-            <span className="bg-[#1ec2ef] rounded-full p-2">
+            <span className="bg-[#75BC84] rounded-full p-2">
               {/* location icon */}
               <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
                 <circle cx="10" cy="10" r="10" />
               </svg>
-              <span>
+             
+            </span>
+            <span>
               Medical Booking and Patient Support Centre
 
               </span>
-            </span>
             <span>
               
             </span>
           </div>
           <div className="flex items-center gap-2 text-white">
-            <span className="bg-[#1ec2ef] rounded-full p-2">
+            <span className="bg-[#BCDFCE] rounded-full p-2">
               {/* mail icon */}
               <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
                 <circle cx="10" cy="10" r="10" />
@@ -155,7 +156,7 @@ export default function Footer() {
             <span>General Inquiries info.metheal@gmail.com</span>
           </div>
           <div className="flex items-center gap-2 text-white">
-            <span className="bg-[#1ec2ef] rounded-full p-2">
+            <span className="bg-[#00A86A] rounded-full p-2">
               {/* phone icon */}
               <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
                 <circle cx="10" cy="10" r="10" />
@@ -168,12 +169,12 @@ export default function Footer() {
 
       <InfiniteMarquee2 />
       {/* Attribution */}
-      <div className="text-center text-[#70749b] bg-white rounded-t-3xl w-[96%] mx-auto mt-8 py-3 text-base z-10 relative">
+      <div className="text-center text-[#00A86A] bg-white rounded-t-3xl w-[96%] mx-auto mt-8 py-3 text-base z-10 relative">
         © 2025, Met Heal. Made with passion by GoWappily Infotech.
       </div>
       {/* Floating Arrow */}
       {/* <div className="fixed bottom-8 right-8 z-20">
-        <button className="bg-[#02acca] p-3 rounded-lg">
+        <button className="bg-[#00A86A] p-3 rounded-lg">
 
           <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
             <path d="M12 8l-7 8h14z" />

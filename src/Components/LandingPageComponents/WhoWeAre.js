@@ -1,14 +1,14 @@
 import { FaUserMd, FaHospital, FaFlask, FaUserFriends, FaHeartbeat, FaPills, FaVial, FaFileInvoice } from "react-icons/fa";
 
 const WHO_SERVICES = [
-  { icon: <FaUserMd className="text-[#7367F0] w-5 h-5" />, label: "Doctor Guidance" },
-  { icon: <FaHospital className="text-[#7367F0] w-5 h-5" />, label: "Hospital Recommendation" },
-  { icon: <FaFlask className="text-[#7367F0] w-5 h-5" />, label: "Lab Diagnostics" },
-  { icon: <FaUserFriends className="text-[#7367F0] w-5 h-5" />, label: "Patient Companions" },
-  { icon: <FaHeartbeat className="text-[#7367F0] w-5 h-5" />, label: "Checkups / Special Care" },
-  { icon: <FaPills className="text-[#7367F0] w-5 h-5" />, label: "Medicine & Pharmacy" },
-  { icon: <FaVial className="text-[#7367F0] w-5 h-5" />, label: "Diagnostics/Tests" },
-  { icon: <FaFileInvoice className="text-[#7367F0] w-5 h-5" />, label: "Billing & Paperwork" },
+  { icon: <FaUserMd className="text-[#00A86A] w-5 h-5" />, label: "Doctor Guidance" },
+  { icon: <FaHospital className="text-[#75BC84] w-5 h-5" />, label: "Hospital Recommendation" },
+  { icon: <FaFlask className="text-[#BCDFCE] w-5 h-5" />, label: "Lab Diagnostics" },
+  { icon: <FaUserFriends className="text-[#00A86A] w-5 h-5" />, label: "Patient Companions" },
+  { icon: <FaHeartbeat className="text-[#75BC84] w-5 h-5" />, label: "Checkups / Special Care" },
+  { icon: <FaPills className="text-[#BCDFCE] w-5 h-5" />, label: "Medicine & Pharmacy" },
+  { icon: <FaVial className="text-[#00A86A] w-5 h-5" />, label: "Diagnostics/Tests" },
+  { icon: <FaFileInvoice className="text-[#75BC84] w-5 h-5" />, label: "Billing & Paperwork" },
 ];
 
 export default function WhoWeAre() {
@@ -26,7 +26,7 @@ export default function WhoWeAre() {
           We guide, support, and escort patients through doctor visits, treatments, and health tasks—with complete trust and care.
         </p>
         <div>
-          <h2 className="text-2xl font-semibold text-[#7367F0] mb-4">
+          <h2 className="text-2xl font-semibold text-[#00A86A] mb-4">
             What We Help With
           </h2>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-[#162146] text-base">
