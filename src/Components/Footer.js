@@ -1,72 +1,33 @@
 // Footer.jsx
 import React from "react";
 import InfiniteMarquee2 from "./InfiniteMarquee2";
-import { FaRegHospital, FaUserNurse, FaTruckMedical } from "react-icons/fa6";
-import { HiOutlineUserGroup } from "react-icons/hi2";
-import { MdOutlineMedicalServices, MdOutlineSupportAgent, MdOutlineAddShoppingCart } from "react-icons/md";
-import { RiFileList2Line } from "react-icons/ri";
-import { TbAmbulance } from "react-icons/tb";
 
-
-
-const OUR_SERVICES = [
+// Services pulled from DentalAppointment.js (lines 126-133)
+const SERVICES_LIST = [
   {
-    id: 1,
-    title: "Medical Consultation Services",
-    icon: <MdOutlineMedicalServices className="w-7 h-7 text-white" />,
-    description:
-      "We help you make the right medical decisions by guiding you on:",
-    features: [
-      "Which doctor to visit for your specific problem or condition",
-      "Which hospital is best for your required treatment",
-      "Which diagnostic lab gives the most reliable and accurate tests",
-      "Treatment guidance for various medical conditions",
-      "Second-opinion support for patients and families"
-      // Only 5 features here (already ≤ 6)
-    ],
+    label: "Doctor Guidance"
   },
   {
-    id: 2,
-    title: "Companion Services for Patients",
-    icon: <MdOutlineSupportAgent className="w-7 h-7 text-white" />,
-    description:
-      "(Trained male companions for support — not caretakers)",
-    features: [
-      "OPD / IPD Visit Assistance",
-      "Companion support for parent’s OPD/IPD visits",
-      "Assistance in registration, documentation, and escorting patients",
-      "Taking patients safely for Dialysis",
-      "Taking patients for Chemotherapy",
-      "Help with MRI, CT Scan, Ultrasound, X-ray & other imaging"
-      // Now only 6 features, per instructions
-    ],
+    label: "Hospital Recommendation"
   },
   {
-    id: 3,
-    title: "Medical Errand Services",
-    icon: <MdOutlineAddShoppingCart className="w-7 h-7 text-white" />,
-    description: "",
-    features: [
-      "Assistance in pharmacy needs (medicines pickup & delivery)",
-      "Help with hospital billing & admission formalities",
-      "Managing discharge processes",
-      "Coordinating follow-up visits"
-      // Only 4 features (already ≤ 6)
-    ],
+    label: "Patient Companion/Escort"
   },
   {
-    id: 4,
-    title: "Full Patient Movement & Escort Services",
-    icon: <TbAmbulance className="w-7 h-7 text-white" />,
-    description: "",
-    features: [
-      "Pick-up & drop for patients",
-      "Safe transportation to hospital, lab, or clinic",
-      "Waiting-area supervision",
-      "Drop back home after completion of the visit or procedure"
-      // Only 4 features (already ≤ 6)
-    ],
+    label: "Lab Diagnostics"
   },
+  {
+    label: "Medicine & Pharmacy Pick-Up"
+  },
+  {
+    label: "Billing & Admission Help"
+  },
+  {
+    label: "Patient Movement/Escort Services"
+  },
+  {
+    label: "Checkups & Special Care"
+  }
 ];
 
 export default function Footer() {
@@ -105,7 +66,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          {/* QUICK LINKS, SERVICES FROM OUR_SERVICES, NEWSLETTER */}
+          {/* QUICK LINKS, SERVICES, NEWSLETTER */}
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-8 w-full">
             {/* Quick Links */}
             <div>
@@ -128,22 +89,15 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            {/* Services (dynamic from OUR_SERVICES) */}
+            {/* Services - from DentalAppointment.js (options 126-133) */}
             <div>
               <h3 className="text-white font-semibold text-xl mb-4">Services</h3>
               <ul className="space-y-3 text-base">
-                {OUR_SERVICES.map((service) => (
-                  <li key={service.id}>
+                {SERVICES_LIST.map((service) => (
+                  <li key={service.label} className="flex items-center">
                     <a href="/services" className="text-white hover:underline">
-                      {service.title}
+                      {service.label}
                     </a>
-                    {service.features?.length > 0 && (
-                      <ul className="ml-3 mt-2 space-y-1 list-disc text-white/70 text-sm">
-                        {service.features.slice(0, 4).map((feature, idx) => (
-                          <li key={idx}>{feature}</li>
-                        ))}
-                      </ul>
-                    )}
                   </li>
                 ))}
               </ul>
@@ -182,6 +136,10 @@ export default function Footer() {
               <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
                 <circle cx="10" cy="10" r="10" />
               </svg>
+              <span>
+              Medical Booking and Patient Support Centre
+
+              </span>
             </span>
             <span>
               
