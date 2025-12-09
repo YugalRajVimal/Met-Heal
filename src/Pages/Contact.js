@@ -177,7 +177,7 @@
 //   };
 
 //   const contactInfo = {
-//     email: "himanshusingh118763@gmail.com",
+//     email: "info.metheal@gmail.com",
 //     phone: "+919798405830",
 //     location: {
 //       address1: "Met Heal, Sector 56 D-235, Gurgaon, Haryana, India",
@@ -434,7 +434,7 @@ const Contact = () => {
               <div>
                 <div className="font-bold text-gray-900">General Inquiries</div>
                 <div className="text-teal-800 font-semibold underline">
-                  himanshusingh118763@gmail.com
+                  info.metheal@gmail.com
                 </div>
               </div>
             </div>

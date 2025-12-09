@@ -184,9 +184,7 @@ export default function Footer() {
               </svg>
             </span>
             <span>
-              Visit Our Clinic: Met Heal Gurgaon, Sector 56 D 235
-              <br />
-              Dr Himanshu Singh BDS MDS Orthodontics, TMJ Specialist
+              
             </span>
           </div>
           <div className="flex items-center gap-2 text-white">
@@ -196,7 +194,7 @@ export default function Footer() {
                 <circle cx="10" cy="10" r="10" />
               </svg>
             </span>
-            <span>General Inquiries himanshusingh118763@gmail.com</span>
+            <span>General Inquiries info.metheal@gmail.com</span>
           </div>
           <div className="flex items-center gap-2 text-white">
             <span className="bg-[#1ec2ef] rounded-full p-2">
