@@ -32,7 +32,7 @@ const SERVICES_LIST = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-[#75BC84] via-[#00A86A] via-50% to-[#BCDFCE] to-100% pt-20 pb-0 px-4 md:px-0">
+    <footer className="relative bg-gradient-to-br from-green-600 via-green-600 to-green-600 pt-20 pb-0 px-4 md:px-0">
       <div className="mx-auto rounded-3xl overflow-visible pb-10">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 px-8 py-12">
           {/* Left CARD */}
@@ -53,12 +53,14 @@ export default function Footer() {
             </p>
             <div className="pt-2 border-t border-[#BCDFCE] text-sm text-[#00A86A] space-y-2">
               <div className="flex justify-between pt-2">
-                <span className="font-medium">Mon - Fri</span>
-                <span>9:00 - 18:00</span>
+                <span className="font-medium">Mon - Sat</span>
+                <span>10:00 AM - 09:00 PM</span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Sat - Sun</span>
-                <span>8:00 - 16:00</span>
+              <div className="flex justify-between py-1">
+                <span>Sun</span>
+                <span className="font-medium">
+                  By Appointment Only
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Emergency</span>
@@ -104,7 +106,7 @@ export default function Footer() {
             </div>
             {/* Newsletter */}
             <div>
-              <h3 className="text-[#00A86A] font-semibold text-xl mb-4">Newsletter</h3>
+              <h3 className="text-white font-semibold text-xl mb-4">Newsletter</h3>
               <p className="text-white text-base mb-4">
                 Join the Community and Receive Our Monthly Newsletter Straight
                 to Your Inbox
@@ -170,7 +172,15 @@ export default function Footer() {
       <InfiniteMarquee2 />
       {/* Attribution */}
       <div className="text-center text-[#00A86A] bg-white rounded-t-3xl w-[96%] mx-auto mt-8 py-3 text-base z-10 relative">
-        © 2025, Met Heal. Made with passion by GoWappily Infotech.
+        © 2025, Met Heal. Made with passion by{" "}
+        <a
+          href="https://gowappily.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-lime-700 transition"
+        >
+          GoWappily Infotech
+        </a>.
       </div>
       {/* Floating Arrow */}
       {/* <div className="fixed bottom-8 right-8 z-20">

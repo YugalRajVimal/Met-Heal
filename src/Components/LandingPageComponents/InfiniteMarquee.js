@@ -21,20 +21,20 @@ const words = [
   "Pharmacy Assistance"
 ];
 
+// Tailwind green/lime palette gradients for visual variety
+const gradients = [
+  { from: "from-lime-400", to: "to-green-600" },
+  { from: "from-green-900", to: "to-lime-500" },
+  { from: "from-green-600", to: "to-lime-300" }
+];
+
 function InfiniteMarquee() {
   const marqueeRef = useRef(null);
 
-  // Cycle through green gradient options for visual variety
-  const gradients = [
-    { from: "#BCDFCE", to: "#75BC84" },
-    { from: "#75BC84", to: "#00A86A" },
-    { from: "#00A86A", to: "#162146" },
-  ];
-
   return (
-    <div className="overflow-hidden bg-white w-full flex items-center pb-16">
+    <div className="overflow-hidden bg-lime-50 w-full flex items-center pb-16">
       <motion.div
-        className="flex h-fit items-center justify-center whitespace-nowrap text-8xl font-sans font-semibold text-[#162146]"
+        className="flex h-fit items-center justify-center whitespace-nowrap text-8xl font-sans font-semibold"
         style={{ willChange: "transform" }}
         animate={{
           x: ["0%", "-100%"],
@@ -47,22 +47,29 @@ function InfiniteMarquee() {
         ref={marqueeRef}
       >
         {/* Repeat content to create seamless loop */}
-        {[...Array(2)].map((_, i) => (
-          <span key={i} className="flex items-center ">
+        {[...Array(2)].map((_, setIdx) => (
+          <span key={setIdx} className="flex items-center">
             {words.map((word, idx) => {
-              // For visual interest, pick a gradient from the array based on index
+              // Pick Tailwind green/lime gradient for text, cycling by index
               const grad = gradients[idx % gradients.length];
+              // Compose Tailwind classes for gradient text
+              const textClasses = [
+                "flex",
+                "items-center",
+                "bg-clip-text",
+                "text-transparent",
+                "font-semibold",
+                "transition-colors",
+                "duration-300",
+                `bg-gradient-to-r`,
+                grad.from,
+                grad.to
+              ].join(" ");
               return (
-                <span
-                  key={word + idx}
-                  className="flex items-center bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: `linear-gradient(90deg, ${grad.from} 0%, ${grad.to} 100%)`
-                  }}
-                >
+                <span key={word + idx} className={textClasses}>
                   <span>{word}</span>
                   {idx !== words.length - 1 && (
-                    <span className="mx-16 text-4xl text-[#162146] flex items-center">
+                    <span className="mx-16 text-4xl text-green-600 flex items-center">
                       <FaRegStar size={36} />
                     </span>
                   )}

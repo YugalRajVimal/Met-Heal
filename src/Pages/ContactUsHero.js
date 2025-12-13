@@ -8,13 +8,13 @@ export default function ContactUsHero() {
       <div
         className="h-[480px] bg-gradient-to-r from-teal-900/70 to-transparent rounded-b-3xl overflow-hidden flex items-center relative"
         style={{
-          backgroundImage: "url('/contactUsBanner.jpg')",
+          backgroundImage: "url('/.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}
       >
-        <div className="flex flex-col justify-center h-full pl-20 z-20">
-          <h1 className="text-white text-5xl font-semibold mb-2">Contact Us</h1>
+        <div className="flex flex-col justify-center h-full pl-6 md:pl-20 z-20">
+          <h1 className="text-white text-5xl font-semibold mb-2 font-serif">Contact Us</h1>
           {/* Breadcrumb */}
           <div className="mt-5">
             <span className="bg-teal-500 px-2 py-1 rounded-full text-white text-xs">

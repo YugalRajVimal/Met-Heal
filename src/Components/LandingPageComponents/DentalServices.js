@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRegHospital, FaUserNurse, FaTruckMedical } from "react-icons/fa6";
-import { HiOutlineUserGroup } from "react-icons/hi2";
 import { MdOutlineMedicalServices, MdOutlineSupportAgent, MdOutlineAddShoppingCart } from "react-icons/md";
-import { RiFileList2Line } from "react-icons/ri";
 import { TbAmbulance } from "react-icons/tb";
 
+// Use only the allowed colors
 const OUR_SERVICES = [
   {
     id: 1,
@@ -69,7 +67,7 @@ const textVariant = {
 
 export default function OurServices() {
   return (
-    <section className="py-20 bg-white" id="our-services">
+    <section className="py-20 bg-lime-50" id="our-services">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Header */}
         <motion.div
@@ -78,13 +76,13 @@ export default function OurServices() {
           animate="visible"
           className="mb-12"
         >
-          <span className="inline-block bg-gray-100 text-[#00A86A] px-5 py-1.5 rounded-full font-medium text-sm mb-4">
-            ✅ Our Services
+          <span className="inline-block bg-lime-100 text-green-900 px-5 py-1.5 rounded-full font-medium text-sm mb-4">
+            Our Services
           </span>
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#0D0D25]">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-green-900">
             We Simplify Medical Journeys
             <br />
-            <span className="italic text-[#75BC84] font-medium">
+            <span className="italic text-lime-600 font-serif font-medium">
               End-to-End Patient Support
             </span>
           </h2>
@@ -99,20 +97,19 @@ export default function OurServices() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.15 * idx }}
-              // Set a consistent card height for all cards
-              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 text-left flex flex-col h-full "
+              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 text-left flex flex-col h-full border border-lime-200"
             >
-              <div className="flex items-center gap-4 bg-[#00A86A] p-4 rounded-t-3xl shadow">
-                <div className="bg-[#75BC84] p-3 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex items-center gap-4 bg-green-600 p-4 rounded-t-3xl shadow">
+                <div className="bg-lime-400 p-3 rounded-xl flex items-center justify-center shadow-lg transition group-hover:bg-lime-500">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
+                <h3 className="text-2xl font-serif font-semibold text-white">{service.title}</h3>
               </div>
-              <div className="flex-1 flex flex-col justify-start py-7 pb-8 px-7">
+              <div className="flex-1 flex flex-col justify-start py-7 pb-8 px-7 bg-white/60">
                 {service.description && (
                   <p className="text-gray-700 text-base mb-4">{service.description}</p>
                 )}
-                <ul className="pl-4 text-gray-600 list-disc space-y-2 text-sm">
+                <ul className="pl-4 text-gray-700 list-disc space-y-2 text-sm">
                   {service.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}

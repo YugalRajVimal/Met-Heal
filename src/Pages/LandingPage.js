@@ -11,7 +11,7 @@ import Certificate from "../Components/LandingPageComponents/Certificate";
 
 const LandingPage = () => {
   return (
-    <div className="h-[200vh]">
+    <div className="h-[200vh] bg-lime-50">
       <HeroSection />
       {/* <FamilyHealthHero /> */}
       <DentalServices />

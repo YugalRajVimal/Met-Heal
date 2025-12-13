@@ -3,11 +3,15 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/doctor/doctor1.jpeg",
-  "/doctor/doctor2.jpeg",
-  "/doctor/doctor4.jpeg",
-  "/doctor/doctor1.jpeg",
-  "/doctor/doctor3.jpeg",
+  "/MetHealCreatives/01.png",
+  "/MetHealCreatives/02.png",
+  "/MetHealCreatives/03.png",
+  "/MetHealCreatives/04.png",
+  "/MetHealCreatives/05.png",
+  "/MetHealCreatives/06.jpeg",
+  "/MetHealCreatives/07.jpeg",
+  "/MetHealCreatives/08.jpeg",
+  "/MetHealCreatives/09.jpeg",
 ];
 
 export default function AboutUsSlider() {
@@ -36,7 +40,7 @@ export default function AboutUsSlider() {
 
   return (
     <div
-      className="relative w-full  py-10 overflow-hidden flex items-center justify-center min-h-[600px]"
+      className="relative w-full bg-lime-50  py-10 overflow-hidden flex items-center justify-center min-h-[600px]"
       onMouseEnter={stopAutoplay}
       onMouseLeave={startAutoplay}
     >
@@ -94,16 +98,16 @@ export default function AboutUsSlider() {
                 zIndex,
               }}
               transition={{ type: "spring", stiffness: 120, damping: 18 }}
-              className="absolute rounded-2xl overflow-hidden shadow-2xl border border-white bg-zinc-200"
+              className="absolute rounded-2xl overflow-hidden shadow-2xl border border-white bg-zinc-200 aspect-square"
               style={{
                 width: "clamp(340px, 28vw, 460px)",
-                height: "clamp(300px, 24vw, 400px)",
+                // Use width for aspect ratio, height will be managed by aspect-square class
               }}
             >
               <img
                 src={src}
                 alt={`slide-${i}`}
-                className="object-cover w-full h-full select-none pointer-events-none"
+                className="object-cover w-full h-full aspect-square select-none pointer-events-none"
                 draggable={false}
               />
             </motion.div>
