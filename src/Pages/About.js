@@ -92,7 +92,7 @@ const About = () => {
             </a>
           </div>
           <img
-            src="/dentalTeam.jpg"
+            src="/images/010.png"
             alt="Met Heal Team"
             className="rounded-2xl w-full max-w-md md:max-w-lg mt-3 border-4 border-white shadow-xl object-cover"
           />
@@ -101,12 +101,12 @@ const About = () => {
 
       <InfiniteMarquee />
 
-      <section className="py-24 bg-lime-50">
+      <section className="pt-10 bg-lime-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
             {/* Text Section */}
             <div className="md:w-[60%] mt-20 md:mt-0 prose max-w-none flex flex-col justify-center items-center">
-              <h3 className="text-3xl md:text-4xl text-green-900 font-bold font-montserrat mb-6 tracking-tight md:whitespace-nowrap">
+              <h3 className="text-3xl md:text-4xl text-green-900 font-bold font-montserrat mb-6 tracking-tight ">
                 {texts.title[lang]}
               </h3>
 
@@ -128,7 +128,7 @@ const About = () => {
             {/* Image Section */}
             <div className="w-full md:w-[40%] relative aspect-square md:aspect-auto rounded-lg md:h-[600px]">
               <img
-                src="/den7.jpg"
+                src="/images/03.png"
                 alt="Met Heal Patient Support"
                 className="w-full h-full object-cover rounded-lg"
               />

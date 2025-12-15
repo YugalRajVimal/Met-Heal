@@ -65,9 +65,9 @@ export default function DentalCards() {
               </span>
             </div>
             {/* Unique shape for active card */}
-            {card.active && (
+            {/* {card.active && (
               <span className="absolute -bottom-7 left-6 w-24 h-16 rounded-b-[40px] bg-lime-400 blur-md opacity-40"></span>
-            )}
+            )} */}
           </div>
         ))}
       </div>

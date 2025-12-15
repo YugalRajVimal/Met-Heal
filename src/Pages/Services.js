@@ -15,7 +15,7 @@ const services = [
     id: 1,
     title: "Medical Consultation Services",
     icon: <MdOutlineMedicalServices className="w-7 h-7 text-white" />,
-    image: "/doctor-guidance.jpg",
+    image: "/images/01.png",
     description:
       "We help you make the right medical decisions by guiding you on:",
     features: [
@@ -30,7 +30,7 @@ const services = [
     id: 2,
     title: "Companion Services for Patients",
     icon: <MdOutlineSupportAgent className="w-7 h-7 text-white" />,
-    image: "/opd-ipd.jpg",
+    image: "/images/05.png",
     description: "(Trained male companions for support — not caretakers)",
     features: [
       "OPD / IPD Visit Assistance",
@@ -45,7 +45,7 @@ const services = [
     id: 3,
     title: "Medical Errand Services",
     icon: <MdOutlineAddShoppingCart className="w-7 h-7 text-white" />,
-    image: "/pharmacy.jpg",
+    image: "/images/15.png",
     description: "",
     features: [
       "Assistance in pharmacy needs (medicines pickup & delivery)",
@@ -58,7 +58,7 @@ const services = [
     id: 4,
     title: "Full Patient Movement & Escort Services",
     icon: <TbAmbulance className="w-7 h-7 text-white" />,
-    image: "/patient-transport.jpg",
+    image: "/images/011.png",
     description: "",
     features: [
       "Pick-up & drop for patients",
@@ -99,7 +99,7 @@ const Services = () => {
       <ServicesHero />
 
       {/* ---------- Intro Section ---------- */}
-      <section className="mx-auto py-20 px-6 md:px-12 ">
+      <section className="mx-auto py-20 px-6 md:px-12 w-screen overflow-x-hidden ">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-900 font-serif">
             We Simplify Medical Journeys
@@ -160,11 +160,11 @@ const Services = () => {
               `}
             >
               {/* Image Section */}
-              <div className="md:w-1/2 w-full h-72 md:h-96 relative group overflow-hidden bg-lime-100">
+              <div className="md:w-[40%] w-full h-72 md:h-96 relative group overflow-hidden bg-lime-100">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 ease-out"
+                  className="h-full w-full object-cover transform group-hover:scale-110 transition duration-700 ease-out"
                   style={{
                     background:
                       "linear-gradient(135deg, #CDE393 0%, #94C973 50%, #D9F99D 100%)",
@@ -176,7 +176,7 @@ const Services = () => {
               </div>
 
               {/* Text Section */}
-              <div className="md:w-1/2 w-full p-8 md:p-10">
+              <div className="md:w-[60%] w-full p-8 md:p-10">
                 <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-green-900">
                   {service.title}
                 </h3>

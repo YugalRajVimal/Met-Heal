@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navBg}`}
+      className={`fixed top-0 left-0 w-screen z-50 transition-all duration-300 ${navBg}`}
     >
       <div className="mx-auto flex items-center justify-between py-3 px-6 md:px-10">
         {/* Logo */}

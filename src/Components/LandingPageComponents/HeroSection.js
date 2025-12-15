@@ -14,73 +14,73 @@ const slides = [
     id: 1,
     title: "Confused about which doctor to visit for your condition?",
     description: "We guide you to the right specialist.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 2,
     title: "Unsure which hospital is best for your treatment?",
     description: "We compare and recommend the best options.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 3,
     title: "Want to know which lab gives the most reliable reports?",
     description: "We suggest trusted labs for accurate diagnostics.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 4,
     title: "From health issues to treatment planning",
     description: "Our expert consultation simplifies every medical decision.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 5,
     title: "For OPD / IPD Visits",
     description: "Now you can trust our trained companions and hand over the responsibility for OPD or IPD visits.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 6,
     title: "For Diagnostics & Scans",
     description: "Need help for MRI, CT scan, Ultrasound, or X-ray? Our companion will handle it all safely and conveniently.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 7,
     title: "For Dialysis / Chemotherapy / Regular Treatments",
     description: "We offer reliable companion support for Dialysis and smooth assistance for Chemotherapy sessions.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 8,
     title: "For Cardiac / General Health Checkups",
     description: "Our medical companion is ready to assist in heart or routine health check-ups.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 9,
     title: "For Pharmacy & Medicines",
     description: "We manage arranging pharmacy medicines and handling ongoing prescription requirements.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 10,
     title: "For Diagnostic Tests",
     description: "We guide you to the right lab and provide assistance throughout diagnostic procedures.",
-    image: "/.jpg"
+    image: "/images/012.png"
   },
   {
     id: 11,
     title: "For Billing & Admissions",
     description: "We handle hospital billing, admissions, and documentation to save your time and stress.",
-    image: "/.jpg"
+    image: "/images/012.png"
   }
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full md:min-h-[90vh] h-[90vh] overflow-hidden rounded-b-3xl">
+    <section className="relative w-full pt-16 md:min-h-[90vh] h-[90vh] overflow-hidden rounded-b-3xl">
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         loop
@@ -107,7 +107,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
-                className="absolute inset-0 flex items-center justify-start px-6 md:px-16"
+                className="absolute bottom-10 left-10 flex items-center justify-start "
               >
                 <div className="backdrop-blur-md bg-white/60 p-6 md:p-10 rounded-2xl max-w-3xl text-left border border-lime-300/80 shadow-lg">
                   {/* Main Title */}

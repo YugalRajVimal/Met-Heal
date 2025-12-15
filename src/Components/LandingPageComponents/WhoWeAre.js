@@ -44,7 +44,7 @@ export default function WhoWeAre() {
       {/* Right Image */}
       <div className="flex-1 flex justify-center items-center w-full h-72 md:h-[420px] relative">
         <div className="w-64 h-64 md:w-[420px] md:h-[520px] rounded-3xl shadow-xl flex items-center justify-center bg-lime-100">
-          <img src="/den7.jpg" className="h-full w-full rounded-xl object-cover shadow-md" alt="Medical support illustration" />
+          <img src="/images/08.png" className="h-full w-full rounded-xl object-cover shadow-md" alt="Medical support illustration" />
         </div>
       </div>
       </div>
