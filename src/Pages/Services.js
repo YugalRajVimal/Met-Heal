@@ -74,37 +74,37 @@ const highlightCards = [
     title: "Unbiased Medical Guidance",
     desc: "Clear recommendations for doctors, hospitals, and diagnostics — focused only on what’s right for the patient.",
     gradient: "from-green-50 via-lime-100 to-white",
-    text: "text-lime-700",
+    text: "text-green-600",
     border: "border-green-200",
   },
   {
     title: "Trained Patient Companions",
     desc: "Reliable escort and assistance for OPD, IPD, diagnostics, dialysis, chemotherapy, and checkups.",
     gradient: "from-green-50 via-lime-100 to-white",
-    text: "text-lime-700",
+    text: "text-green-600",
     border: "border-green-200",
   },
   {
     title: "End-to-End Support",
     desc: "From appointments and billing to pharmacy pickups and transport — we handle the logistics so families don’t have to.",
     gradient: "from-green-50 via-lime-100 to-white",
-    text: "text-lime-700",
+    text: "text-green-600",
     border: "border-green-200",
   },
 ];
 
 const Services = () => {
   return (
-    <div className="text-green-900 bg-lime-50">
+    <div className="text-green-600 bg-lime-50">
       <ServicesHero />
 
       {/* ---------- Intro Section ---------- */}
       <section className="mx-auto py-20 px-6 md:px-12 w-screen overflow-x-hidden ">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-900 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-600 font-serif">
             We Simplify Medical Journeys
           </h2>
-          <p className="text-lime-700 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-green-600 max-w-3xl mx-auto text-lg leading-relaxed">
             Met Heal provides end-to-end medical guidance and patient support — helping individuals and families navigate healthcare decisions, hospital visits, and medical logistics with clarity and confidence.
           </p>
         </div>
@@ -123,7 +123,7 @@ const Services = () => {
               <h3 className={`text-xl font-semibold mb-3 ${card.text}`}>
                 {card.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed">{card.desc}</p>
+              <p className="text-green-600 leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -132,10 +132,10 @@ const Services = () => {
       {/* ---------- Services Grid ---------- */}
       <section className="py-20 px-6 md:px-12 lg:px-20 ">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-900 font-serif mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-600 font-serif mb-4">
             Our Patient Support Services
           </h2>
-          <p className="text-lime-700 max-w-3xl mx-auto text-lg">
+          <p className="text-green-600 max-w-3xl mx-auto text-lg">
             A complete range of medical guidance, coordination, and patient companion services designed to make healthcare simpler, safer, and stress-free.
           </p>
         </div>
@@ -170,21 +170,21 @@ const Services = () => {
                       "linear-gradient(135deg, #CDE393 0%, #94C973 50%, #D9F99D 100%)",
                   }}
                 />
-                <div className="absolute top-4 left-4 bg-lime-400 p-4 rounded-full shadow-md border-2 border-white">
+                <div className="absolute top-4 left-4 bg-green-600 p-4 rounded-full shadow-md border-2 border-white">
                   {service.icon}
                 </div>
               </div>
 
               {/* Text Section */}
               <div className="md:w-[60%] w-full p-8 md:p-10">
-                <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-green-900">
+                <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-green-600">
                   {service.title}
                 </h3>
                 {service.description && (
-                  <p className="text-green-700 text-md mb-4">{service.description}</p>
+                  <p className="text-green-600 text-md mb-4">{service.description}</p>
                 )}
                 {service.features && service.features.length > 0 && (
-                  <ul className="list-disc list-inside text-lime-700 text-lg space-y-2">
+                  <ul className="list-disc list-inside text-green-600 text-lg space-y-2">
                     {service.features.map((f, i) => (
                       <li key={i}>{f}</li>
                     ))}
@@ -197,19 +197,19 @@ const Services = () => {
       </section>
 
       {/* ---------- Closing Section ---------- */}
-      <section className="bg-lime-100 text-center py-20 px-6">
-        <motion.h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-green-900">
+      <section className="bg-green-600 text-center py-20 px-6">
+        <motion.h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-white">
           Need Help With a Medical Visit?
         </motion.h2>
 
-        <motion.p className="max-w-2xl mx-auto text-green-800 mb-8 text-lg">
+        <motion.p className="max-w-2xl mx-auto text-lime-100 mb-8 text-lg">
           From choosing the right doctor to completing hospital visits smoothly, Met Heal is here to guide and support you at every step.
         </motion.p>
 
         <motion.a
           whileHover={{ scale: 1.05 }}
           href="/contact"
-          className="inline-block bg-lime-400 text-green-900 font-semibold px-8 py-3 rounded-full shadow hover:bg-lime-500 hover:text-green-900 transition"
+          className="inline-block bg-white text-green-600 font-semibold px-8 py-3 rounded-full shadow hover:bg-lime-100 hover:text-green-600 transition"
         >
           Contact Us
         </motion.a>

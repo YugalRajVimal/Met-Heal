@@ -21,15 +21,15 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-10 md:gap-0">
         {/* Left - Contact Details & Emergency Line */}
         <div className="md:w-1/2 p-8 rounded-2xl flex flex-col">
-          <h2 className="text-3xl font-bold text-green-900 mb-3">
+          <h2 className="text-3xl font-bold text-green-600 mb-3">
             Emergency Call:
           </h2>
-          <p className="text-gray-700 mb-6 font-medium">
+          <p className="text-green-600 mb-6 font-medium">
             <span>
               Need our services urgently? Call our Emergency Number:{" "}
               <a
                 href="tel:+919798405830"
-                className="font-bold text-green-600 underline hover:text-green-900"
+                className="font-bold text-green-600 underline hover:text-green-600"
               >
                 +919798405830
               </a>
@@ -37,26 +37,26 @@ const Contact = () => {
           </p>
           <div className="space-y-6 mb-8">
             <div className="flex items-center gap-4">
-              <span className="bg-lime-500 text-white rounded-full p-3">
+              <span className="bg-green-600 text-white rounded-full p-3">
                 <MdOutlineLocationOn size={24} />
               </span>
               <div>
-                <div className="font-bold text-green-900">Visit Us</div>
-                <div className="text-gray-700 text-base">
+                <div className="font-bold text-green-600">Visit Us</div>
+                <div className="text-green-600 text-base">
                   Met Heal Medical Booking & Patient Support Centre, <br /> Gurgaon, Sector 56 D 235
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <span className="bg-lime-500 text-white rounded-full p-3">
+              <span className="bg-green-600 text-white rounded-full p-3">
                 <MdOutlineMail size={24} />
               </span>
               <div>
-                <div className="font-bold text-green-900">General Inquiries</div>
+                <div className="font-bold text-green-600">General Inquiries</div>
                 <div>
                   <a
                     href="mailto:info.metheal@gmail.com"
-                    className="text-lime-700 font-semibold underline"
+                    className="text-green-600 font-semibold underline"
                   >
                     info.metheal@gmail.com
                   </a>
@@ -64,17 +64,17 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <span className="bg-lime-500 text-white rounded-full p-3">
+              <span className="bg-green-600 text-white rounded-full p-3">
                 <MdOutlinePhone size={24} />
               </span>
               <div>
-                <div className="font-bold text-green-900">
+                <div className="font-bold text-green-600">
                   Appointment Booking
                 </div>
                 <div>
                   <a
                     href="tel:+919798405830"
-                    className="text-green-600 font-semibold underline hover:text-green-900"
+                    className="text-green-600 font-semibold underline hover:text-green-600"
                   >
                     +919798405830
                   </a>
@@ -84,23 +84,23 @@ const Contact = () => {
           </div>
           {/* Operating Hours */}
           <div>
-            <h3 className="text-2xl font-semibold text-green-900 mb-3">
+            <h3 className="text-2xl font-semibold text-green-600 mb-3">
               Operating Hours
             </h3>
             <div className="mb-6">
               <div className="flex justify-between py-1">
-                <span>Mon - Sat</span>
-                <span className="font-medium">10:00 AM - 09:00 PM</span>
+                <span className="text-green-600">Mon - Sat</span>
+                <span className="font-medium text-green-600">10:00 AM - 09:00 PM</span>
               </div>
               <div className="flex justify-between py-1">
-                <span>Sun</span>
-                <span className="font-medium">
+                <span className="text-green-600">Sun</span>
+                <span className="font-medium text-green-600">
                   By Appointment Only
                 </span>
               </div>
               <div className="flex justify-between py-1">
-                <span>Emergency</span>
-                <span className="font-medium">24/7</span>
+                <span className="text-green-600">Emergency</span>
+                <span className="font-medium text-green-600">24/7</span>
               </div>
             </div>
             <div className="flex gap-4 mt-2">
@@ -108,7 +108,7 @@ const Contact = () => {
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-green-50 p-2 rounded-full text-blue-600 text-xl"
+                className="bg-green-600 hover:bg-green-600 p-2 rounded-full text-white text-xl"
                 aria-label="Met Heal Facebook"
               >
                 <FaFacebookF />
@@ -117,7 +117,7 @@ const Contact = () => {
                 href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-green-50 p-2 rounded-full text-sky-500 text-xl"
+                className="bg-green-600 hover:bg-green-600 p-2 rounded-full text-white text-xl"
                 aria-label="Met Heal LinkedIn"
               >
                 <FaLinkedinIn />
@@ -126,7 +126,7 @@ const Contact = () => {
                 href="https://wa.me/919798405830"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-green-50 p-2 rounded-full text-lime-600 text-xl"
+                className="bg-green-600 hover:bg-green-600 p-2 rounded-full text-white text-xl"
                 aria-label="Met Heal WhatsApp"
               >
                 <RiWhatsappLine />
@@ -138,13 +138,13 @@ const Contact = () => {
         {/* Right - Appointment Booking Form */}
         <div className="md:w-1/2 p-8 rounded-2xl">
           <div className="mb-4">
-            <span className="inline-block rounded-full px-3 py-1 bg-lime-100 text-green-700 text-sm font-semibold mb-2">
+            <span className="inline-block rounded-full px-3 py-1 bg-green-600 text-white text-sm font-semibold mb-2">
               Medical Booking and Patient Support Centre
             </span>
-            <h2 className="text-4xl font-extrabold text-green-900 mt-2 mb-3 leading-tight">
+            <h2 className="text-4xl font-extrabold text-green-600 mt-2 mb-3 leading-tight">
               Book a Service Appointment
             </h2>
-            <p className="text-lime-700 font-medium mb-6">
+            <p className="text-green-600 font-medium mb-6">
               Secure, simple, and fast booking for medical guidance, hospital recommendations, and patient companion services. We streamline your journey to world-class care.
             </p>
           </div>
@@ -153,21 +153,21 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white"
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white"
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Phone"
-                className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white"
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
               />
-              <select className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white">
+              <select className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white">
                 <option value="">Select Service</option>
                 <option>Medical Consultation</option>
                 <option>Doctor Guidance</option>
@@ -188,7 +188,7 @@ const Contact = () => {
               </select>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <select className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white">
+              <select className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white">
                 <option value="">Select Option</option>
                 <option>Doctor Guidance</option>
                 <option>Hospital Recommendation</option>
@@ -212,17 +212,17 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="dd/mm/yyyy"
-                className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white"
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
               />
             </div>
             <textarea
               rows={4}
               placeholder="Your Message (Optional)"
-              className="w-full border border-lime-200 rounded-lg px-4 py-2 text-lg text-green-900 focus:outline-none focus:border-lime-400 bg-white resize-none"
+              className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white resize-none"
             />
             <button
               type="submit"
-              className="block w-full bg-lime-500 hover:bg-lime-600 text-white text-lg font-semibold py-3 rounded-lg transition"
+              className="block w-full bg-green-600 hover:bg-green-600 text-white text-lg font-semibold py-3 rounded-lg transition"
             >
               Book Service
             </button>

@@ -41,15 +41,15 @@ const About = () => {
         {/* LEFT SIDE */}
         <div className="flex-1 flex w-full flex-col items-center md:items-start justify-center">
           <div className="w-full flex flex-col items-center md:items-start">
-            <span className="text-green-900 font-extrabold text-2xl mb-3 tracking-wide uppercase">
+            <span className="text-green-600 font-extrabold text-2xl mb-3 tracking-wide uppercase">
               About Met Heal
             </span>
             <div className="relative flex items-end w-full">
               <div className="flex-shrink-0 flex items-end drop-shadow-xl bg-gradient-to-t from-lime-100 to-green-50 rounded-2xl">
-                <span className="block text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[13rem] leading-none font-extrabold text-green-900/90 tracking-tight p-1 md:p-2">
+                <span className="block text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[13rem] leading-none font-extrabold text-green-600 tracking-tight p-1 md:p-2">
                   3+
                 </span>
-                <span className="block text-[1.7rem] sm:text-[2.2rem] md:text-[3rem] lg:text-[5rem] leading-none font-extrabold text-green-900/90 tracking-tight p-1 md:p-2">
+                <span className="block text-[1.7rem] sm:text-[2.2rem] md:text-[3rem] lg:text-[5rem] leading-none font-extrabold text-green-600 tracking-tight p-1 md:p-2">
                   Years
                 </span>
               </div>
@@ -60,7 +60,7 @@ const About = () => {
           </div>
 
           <div className="flex items-center mt-8">
-            <span className="ml-7 text-green-900 font-semibold text-md md:text-lg leading-tight md:leading-snug">
+            <span className="ml-7 text-green-600 font-semibold text-md md:text-lg leading-tight md:leading-snug">
               <span className="text-lime-700 font-bold">
                 Medical Guidance & Patient Support Professionals
               </span>
@@ -86,7 +86,7 @@ const About = () => {
             </p>
             <a
               href="#"
-              className="inline-block mt-3 bg-gradient-to-r from-lime-400 via-lime-500 to-green-600 text-white py-2 px-5 rounded-xl font-semibold text-base shadow hover:bg-lime-600 transition"
+              className="inline-block mt-3 bg-gradient-to-r from-lime-400 via-lime-500 to-green-600 text-white py-2 px-5 rounded-xl font-semibold text-base shadow hover:bg-green-600 transition"
             >
               Explore Our Services
             </a>
@@ -106,7 +106,7 @@ const About = () => {
           <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
             {/* Text Section */}
             <div className="md:w-[60%] mt-20 md:mt-0 prose max-w-none flex flex-col justify-center items-center">
-              <h3 className="text-3xl md:text-4xl text-green-900 font-bold font-montserrat mb-6 tracking-tight ">
+              <h3 className="text-3xl md:text-4xl text-green-600 font-bold font-montserrat mb-6 tracking-tight ">
                 {texts.title[lang]}
               </h3>
 
@@ -115,7 +115,7 @@ const About = () => {
               </p>
 
               {texts.paragraphs[lang].map((para, index) => (
-                <p key={index} className="text-green-900 font-roboto mb-4">
+                <p key={index} className="text-green-600 font-roboto mb-4">
                   {para}
                 </p>
               ))}
@@ -138,7 +138,7 @@ const About = () => {
                   <p className="text-3xl md:text-5xl font-bold font-montserrat text-lime-700 shadow-text">
                     3+
                   </p>
-                  <p className="text-xs md:text-base text-green-900 font-roboto mt-1 md:mt-2">
+                  <p className="text-xs md:text-base text-green-600 font-roboto mt-1 md:mt-2">
                     {texts.years[lang]}
                   </p>
                 </div>

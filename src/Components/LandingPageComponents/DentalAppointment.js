@@ -5,7 +5,7 @@ export default function DentalAppointment() {
     <section className="relative min-h-screen flex bg-lime-50 items-center justify-center bg-fixed bg-cover bg-center px-2 py-12">
       <div className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row rounded-3xl shadow-2xl overflow-hidden bg-white/50 backdrop-blur-xl border border-lime-100">
         {/* Left Side (Info) */}
-        <div className="md:w-1/2 w-full flex flex-col justify-between bg-gradient-to-b from-green-600 to-green-900">
+        <div className="md:w-1/2 w-full flex flex-col justify-between bg-green-600">
           <div className="pt-14 pl-10 pr-10 pb-6">
             <div className="inline-flex items-center gap-2 mb-7">
               <span className="w-3 h-3 bg-lime-200 rounded-full animate-pulse"></span>
@@ -23,9 +23,9 @@ export default function DentalAppointment() {
               Secure, simple, and fast appointment booking for guidance, hospital recommendations, and patient companion services. We streamline your journey to world-class medical care.
             </p>
           </div>
-          <div className="bg-lime-100/70 w-full px-10 pt-10 pb-3 flex flex-col md:flex-row md:items-center justify-between gap-7 border-t border-lime-300">
+          <div className="bg-lime-100/70 w-full px-10  py-3 flex flex-col md:flex-row md:items-center justify-between gap-7 border-t border-lime-300">
             <div className="w-full">
-              <div className="flex flex-col w-full gap-2 text-white/80 text-sm font-medium">
+              <div className="flex flex-col w-full gap-2 text-green-600 text-sm font-medium">
                 <div className="flex justify-between w-full ">
                   <span className="opacity-80">Mon - Sat</span>
                   <span>10:00 AM - 09:00 PM</span>
@@ -41,7 +41,7 @@ export default function DentalAppointment() {
               </div>
             </div>
           </div>
-          <div className="bg-lime-400/70 rounded-b-3xl px-10 py-7 flex flex-col md:flex-row gap-6 border-t border-lime-300">
+          <div className=" rounded-b-3xl px-10 py-7 flex flex-col md:flex-row gap-6 border-t border-lime-300">
             <div className="flex items-center gap-3 text-white text-sm">
               <span className="bg-lime-200 p-2 rounded-full flex items-center justify-center shadow-md">
                 {/* Modern Home icon */}
@@ -49,7 +49,7 @@ export default function DentalAppointment() {
                   width="22"
                   height="22"
                   fill="none"
-                  stroke="#fff"
+                  stroke="#175436"
                   strokeWidth={2}
                   viewBox="0 0 24 24"
                 >
@@ -71,7 +71,7 @@ export default function DentalAppointment() {
                   width="22"
                   height="22"
                   fill="none"
-                  stroke="#fff"
+                  stroke="#175436"
                   strokeWidth={2}
                   viewBox="0 0 24 24"
                 >
@@ -85,7 +85,7 @@ export default function DentalAppointment() {
                 <br />
                 <a
                   href="tel:+919798405830"
-                  className=" hover:underline font-semibold"
+                  className=" hover:underline font-semibold text-white"
                 >
                   +919798405830
                 </a>
@@ -95,18 +95,18 @@ export default function DentalAppointment() {
         </div>
         {/* Right Side (Form) */}
         <div className="md:w-1/2 w-full bg-white rounded-none md:rounded-l-3xl flex flex-col items-center justify-center py-12 px-7 md:px-14 relative z-10">
-          <h2 className="text-lime-700 text-3xl font-extrabold mb-6 tracking-tight font-serif">
+          <h2 className="text-green-600 text-3xl font-extrabold mb-6 tracking-tight font-serif">
             Book a Service Appointment
           </h2>
           <form className="w-full flex flex-col gap-5">
             <div className="flex gap-4">
               <input
-                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none"
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Your Name"
                 autoComplete="off"
               />
               <input
-                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none"
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Email Address"
                 type="email"
                 autoComplete="off"
@@ -114,12 +114,12 @@ export default function DentalAppointment() {
             </div>
             <div className="flex gap-4">
               <input
-                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none"
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Phone"
                 type="tel"
                 autoComplete="off"
               />
-              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none">
+              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none">
                 <option>Select Service</option>
                 <option>Doctor Guidance</option>
                 <option>Hospital Recommendation</option>
@@ -132,7 +132,7 @@ export default function DentalAppointment() {
               </select>
             </div>
             <div className="flex gap-4">
-              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none">
+              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none">
                 <option>Select Option</option>
                 <option>First-Time Consultation</option>
                 <option>Follow-Up</option>
@@ -140,13 +140,13 @@ export default function DentalAppointment() {
                 <option>Errand Service</option>
               </select>
               <input
-                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none"
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Date"
                 type="date"
               />
             </div>
             <textarea
-              className="w-full border border-lime-200 rounded-xl py-3 px-4 min-h-[100px] text-base transition focus:ring-2 focus:ring-lime-700 focus:bg-lime-100 outline-none"
+              className="w-full border border-lime-200 rounded-xl py-3 px-4 min-h-[100px] text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
               placeholder="Your Message (Optional)"
             ></textarea>
             <button
@@ -161,7 +161,7 @@ export default function DentalAppointment() {
       {/* Floating Arrow */}
       <div className="fixed bottom-8 right-8 z-30 group">
         <button
-          className="bg-lime-700 hover:bg-lime-400 p-3 rounded-full shadow-lg flex items-center transition-all duration-200 group-hover:scale-110"
+          className="bg-green-600 hover:bg-lime-400 p-3 rounded-full shadow-lg flex items-center transition-all duration-200 group-hover:scale-110"
           aria-label="Scroll to Top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >

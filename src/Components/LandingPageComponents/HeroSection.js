@@ -111,12 +111,12 @@ export default function HeroSection() {
               >
                 <div className="backdrop-blur-md bg-white/60 p-6 md:p-10 rounded-2xl max-w-3xl text-left border border-lime-300/80 shadow-lg">
                   {/* Main Title */}
-                  <h1 className="text-3xl md:text-5xl font-serif font-bold mb-5 text-green-900">
+                  <h1 className="text-3xl md:text-5xl font-serif font-bold mb-5 text-green-600">
                     {slide.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-lg md:text-xl mb-6 text-lime-700">
+                  <p className="text-lg md:text-xl mb-6 text-green-600">
                     {slide.description}
                   </p>
 

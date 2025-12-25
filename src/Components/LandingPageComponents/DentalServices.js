@@ -76,10 +76,10 @@ export default function OurServices() {
           animate="visible"
           className="mb-12"
         >
-          <span className="inline-block bg-lime-100 text-green-900 px-5 py-1.5 rounded-full font-medium text-sm mb-4">
+          <span className="inline-block bg-lime-100 text-green-600 px-5 py-1.5 rounded-full font-medium text-sm mb-4">
             Our Services
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-green-900">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-green-600">
             We Simplify Medical Journeys
             <br />
             <span className="italic text-lime-600 font-serif font-medium">
@@ -109,7 +109,7 @@ export default function OurServices() {
                 {service.description && (
                   <p className="text-gray-700 text-base mb-4">{service.description}</p>
                 )}
-                <ul className="pl-4 text-gray-700 list-disc space-y-2 text-sm">
+                <ul className="pl-4 text-green-600 list-disc space-y-2 text-sm">
                   {service.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}

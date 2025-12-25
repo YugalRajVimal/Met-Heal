@@ -5,7 +5,7 @@ const cards = [
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="28" fill="#CDE393" />
-        <text x="17" y="37" fontSize="14" fill="#166534">👨‍⚕️</text>
+        <text x="17" y="37" fontSize="14" fill="#166534" className="text-green-600">👨‍⚕️</text>
       </svg>
     ),
   },
@@ -15,7 +15,7 @@ const cards = [
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="28" fill="#94C973" />
-        <text x="17" y="37" fontSize="14" fill="#166534">🧑‍🤝‍🧑</text>
+        <text x="17" y="37" fontSize="14" fill="#166534" className="text-green-600">🧑‍🤝‍🧑</text>
       </svg>
     ),
     active: true,
@@ -26,7 +26,7 @@ const cards = [
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="28" fill="#CDE393" />
-        <text x="14" y="37" fontSize="14" fill="#166534">👪</text>
+        <text x="14" y="37" fontSize="14" fill="#166534" className="text-green-600">👪</text>
       </svg>
     ),
   },
@@ -42,13 +42,17 @@ export default function DentalCards() {
             className={`relative flex flex-col p-8 rounded-[40px] border ${
               card.active
                 ? "bg-green-600 border-green-600 text-white shadow-xl"
-                : "bg-white border-lime-200 text-green-900 shadow"
+                : "bg-white border-lime-200 text-green-600 shadow"
             } transition-colors duration-200`}
           >
-            <h3 className="text-2xl font-serif md:text-3xl font-semibold my-3">
+            <h3 className={`text-2xl font-serif md:text-3xl font-semibold my-3 ${
+              card.active ? "text-white" : "text-green-600"
+            }`}>
               {card.title}
             </h3>
-            <p className="mb-6 text-lg font-medium text-green-900/80">
+            <p className={`mb-6 text-lg font-medium ${
+              card.active ? "text-white/90" : "text-green-600/80"
+            }`}>
               {card.desc}
             </p>
             {/* Number badge */}
@@ -57,8 +61,8 @@ export default function DentalCards() {
                 className={
                   `inline-flex items-center justify-center rounded-full font-bold text-xl w-14 h-14 border-4 ` +
                   (card.active
-                    ? "bg-lime-300 border-lime-400 text-green-700"
-                    : "bg-lime-100 border-lime-200 text-green-900")
+                    ? "bg-lime-300 border-lime-400 text-green-600"
+                    : "bg-lime-100 border-lime-200 text-green-600")
                 }
               >
                 {String(i + 1).padStart(2, "0")}

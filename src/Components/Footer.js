@@ -32,7 +32,7 @@ const SERVICES_LIST = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-green-600 via-green-600 to-green-600 pt-20 pb-0 px-4 md:px-0">
+    <footer className="relative bg-green-600 pt-20 pb-0 px-4 md:px-0">
       <div className="mx-auto rounded-3xl overflow-visible pb-10">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 px-8 py-12">
           {/* Left CARD */}

@@ -14,8 +14,8 @@ export default function Navbar() {
   }, []);
 
   // Determine text color based on scroll state
-  const textColor = isScrolled ? "text-green-900" : "text-white";
-  const subTextColor = isScrolled ? "text-lime-700" : "text-lime-100";
+  const textColor = isScrolled ? "text-green-600" : "text-white";
+  const subTextColor = isScrolled ? "text-green-600" : "text-white";
   const navHoverColor = isScrolled
     ? "hover:text-lime-600"
     : "hover:text-lime-300";
@@ -35,7 +35,7 @@ export default function Navbar() {
           <img
             src="/logo.jpeg"
             alt="Met Heal Logo"
-            className="w-10 h-10 rounded-lg border-2 border-lime-300"
+            className="w-10 h-10 rounded-lg border-2 border-green-600"
             style={{ backgroundColor: "#CDE393" }}
           />
           <span className={`text-2xl font-semibold ${textColor}`}>
@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-6">
           <div className={`flex items-center text-sm ${textColor}`}>
-            <PhoneCall className="w-5 h-5 mr-2" color={isScrolled ? "#94C973" : "#E0FFC1"} />
+            <PhoneCall className="w-5 h-5 mr-2 text-green-600"  />
             <div>
               <p className={`text-xs ${subTextColor}`}>
                 Emergency Call:
@@ -75,7 +75,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="bg-lime-600 hover:bg-lime-500 text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 transition"
+            className="bg-green-600 hover:bg-lime-500 text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 transition"
             onClick={() => {
               window.scrollTo({
                 top: document.body.scrollHeight,
@@ -130,7 +130,7 @@ export default function Navbar() {
           <div className="pt-4 flex flex-col gap-3 ">
             <a
               href="tel:+919798405830"
-              className="bg-lime-600 hover:bg-lime-500 text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 transition no-underline"
+              className="bg-green-600 hover:bg-lime-500 text-white px-5 py-2 rounded-xl font-medium flex items-center gap-2 transition no-underline"
             >
               Appointment
               <ArrowRight className="w-4 h-4" color={isScrolled ? "#94C973" : "#E0FFC1"} />
