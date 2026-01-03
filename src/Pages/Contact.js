@@ -51,8 +51,7 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
-        credentials: "include",
+        body: JSON.stringify(form)
       });
 
       if (!response.ok) {
