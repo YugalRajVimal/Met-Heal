@@ -155,7 +155,7 @@ export default function Footer() {
                 <circle cx="10" cy="10" r="10" />
               </svg>
             </span>
-            <span>General Inquiries info.metheal@gmail.com</span>
+            <span>General Inquiries metheal.info@gmail.com</span>
           </div>
           <div className="flex items-center gap-2 text-white">
             <span className="bg-[#00A86A] rounded-full p-2">
