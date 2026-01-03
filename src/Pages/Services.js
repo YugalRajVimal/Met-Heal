@@ -58,7 +58,7 @@ const services = [
     id: 4,
     title: "Full Patient Movement & Escort Services",
     icon: <TbAmbulance className="w-7 h-7 text-white" />,
-    image: "/images/011.png",
+    image: "/images/012.png",
     description: "",
     features: [
       "Pick-up & drop for patients",

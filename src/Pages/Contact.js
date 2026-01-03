@@ -112,7 +112,7 @@ const Contact = () => {
               <div>
                 <div className="font-bold text-green-600">Visit Us</div>
                 <div className="text-green-600 text-base">
-                  Met Heal Medical Booking & Patient Support Centre, <br /> Gurgaon, Sector 56 D 235
+                  Met Heal Medical Booking & Patient Support Centre, <br /> Sector 4 ,Vaishali Ghaziabad (UP)
                 </div>
               </div>
             </div>

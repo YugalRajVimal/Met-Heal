@@ -48,7 +48,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-700 text-base mt-1 mb-4">
-              We are dedicated to providing flexible & accessible healthcare
+              We are dedicated to provide flexible & accessible healthcare
               services.
             </p>
             <div className="pt-2 border-t border-[#BCDFCE] text-sm text-[#00A86A] space-y-2">
