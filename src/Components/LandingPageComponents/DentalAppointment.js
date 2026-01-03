@@ -1,6 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function DentalAppointment() {
+  // State for form fields
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    option: "",
+    date: "",
+    message: "",
+  });
+
+  // Submission status UI state
+  const [submitStatus, setSubmitStatus] = useState({
+    loading: false,
+    success: "",
+    error: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission and send to API endpoint
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitStatus({ loading: true, success: "", error: "" });
+
+    try {
+      const apiBaseUrl = process.env.REACT_APP_API_URL || "";
+      const url = `${apiBaseUrl.replace(/\/$/, "")}/send-mail`;
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        const data = await response.text();
+        throw new Error(data || "Submission failed");
+      }
+
+      setSubmitStatus({
+        loading: false,
+        success:
+          "Your enquiry has been submitted to Met Heal, and a confirmation has been sent to your email.",
+        error: "",
+      });
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        option: "",
+        date: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitStatus({
+        loading: false,
+        error: error.message || "Submission failed",
+        success: "",
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex bg-lime-50 items-center justify-center bg-fixed bg-cover bg-center px-2 py-12">
       <div className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row rounded-3xl shadow-2xl overflow-hidden bg-white/50 backdrop-blur-xl border border-lime-100">
@@ -98,18 +171,26 @@ export default function DentalAppointment() {
           <h2 className="text-green-600 text-3xl font-extrabold mb-6 tracking-tight font-serif">
             Book a Service Appointment
           </h2>
-          <form className="w-full flex flex-col gap-5">
+          <form className="w-full flex flex-col gap-5" onSubmit={handleSubmit}>
             <div className="flex gap-4">
               <input
                 className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Your Name"
                 autoComplete="off"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                required
               />
               <input
                 className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Email Address"
                 type="email"
                 autoComplete="off"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="flex gap-4">
@@ -118,9 +199,19 @@ export default function DentalAppointment() {
                 placeholder="Phone"
                 type="tel"
                 autoComplete="off"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                required
               />
-              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none">
-                <option>Select Service</option>
+              <select
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
+                name="service"
+                value={form.service}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select Service</option>
                 <option>Doctor Guidance</option>
                 <option>Hospital Recommendation</option>
                 <option>Patient Companion/Escort</option>
@@ -132,8 +223,14 @@ export default function DentalAppointment() {
               </select>
             </div>
             <div className="flex gap-4">
-              <select className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none">
-                <option>Select Option</option>
+              <select
+                className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base appearance-none transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
+                name="option"
+                value={form.option}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select Option</option>
                 <option>First-Time Consultation</option>
                 <option>Follow-Up</option>
                 <option>Emergency</option>
@@ -143,17 +240,33 @@ export default function DentalAppointment() {
                 className="w-1/2 border border-lime-200 rounded-xl py-3 px-4 text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
                 placeholder="Date"
                 type="date"
+                name="date"
+                value={form.date}
+                onChange={handleChange}
               />
             </div>
             <textarea
               className="w-full border border-lime-200 rounded-xl py-3 px-4 min-h-[100px] text-base transition focus:ring-2 focus:ring-green-600 focus:bg-lime-100 outline-none"
               placeholder="Your Message (Optional)"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
             ></textarea>
+            {submitStatus.loading && (
+              <div className="text-green-600 text-sm w-full text-center mt-2">Booking your appointment, please wait...</div>
+            )}
+            {submitStatus.success && (
+              <div className="text-green-700 text-sm w-full text-center mt-2">{submitStatus.success}</div>
+            )}
+            {submitStatus.error && (
+              <div className="text-red-600 text-sm w-full text-center mt-2">{submitStatus.error}</div>
+            )}
             <button
               className="bg-gradient-to-tr from-lime-400 via-green-600 to-lime-100 text-white font-semibold py-4 rounded-xl w-2/3 mx-auto mt-3 text-lg shadow-lg hover:scale-[1.05] transition"
               type="submit"
+              disabled={submitStatus.loading}
             >
-              Book Service
+              {submitStatus.loading ? "Booking..." : "Book Service"}
             </button>
           </form>
         </div>

@@ -11,8 +11,78 @@ import ContactUsHero from "./ContactUsHero";
 import Footer from "../Components/Footer";
 
 const Contact = () => {
-  // Example state hooks (not functional, since no logic is needed for this prompt)
-  // const [form, setForm] = useState({ ... });
+  // State for all form fields
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    option: "",
+    date: "",
+    message: "",
+  });
+
+  // UI state for submission status
+  const [submitStatus, setSubmitStatus] = useState({
+    loading: false,
+    success: "",
+    error: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission and send to API endpoint
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitStatus({ loading: true, success: "", error: "" });
+
+    try {
+      const apiBaseUrl = process.env.REACT_APP_API_URL || "";
+      const url = `${apiBaseUrl.replace(/\/$/, "")}/send-mail`;
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        const data = await response.text();
+        throw new Error(data || "Submission failed");
+      }
+
+      setSubmitStatus({
+        loading: false,
+        success:
+          "Your enquiry has been submitted to Met Heal, and a confirmation has been sent to your email.",
+        error: "",
+      });
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        option: "",
+        date: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitStatus({
+        loading: false,
+        error: error.message || "Submission failed",
+        success: "",
+      });
+    }
+  };
 
   return (
     <section className="bg-lime-50">
@@ -148,26 +218,44 @@ const Contact = () => {
               Secure, simple, and fast booking for medical guidance, hospital recommendations, and patient companion services. We streamline your journey to world-class care.
             </p>
           </div>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="Your Name"
                 className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                required
               />
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="Email Address"
                 className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                required
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
                 placeholder="Phone"
                 className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                required
               />
-              <select className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white">
+              <select
+                name="service"
+                value={form.service}
+                onChange={handleChange}
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                required
+              >
                 <option value="">Select Service</option>
                 <option>Medical Consultation</option>
                 <option>Doctor Guidance</option>
@@ -188,7 +276,13 @@ const Contact = () => {
               </select>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <select className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white">
+              <select
+                name="option"
+                value={form.option}
+                onChange={handleChange}
+                className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                required
+              >
                 <option value="">Select Option</option>
                 <option>Doctor Guidance</option>
                 <option>Hospital Recommendation</option>
@@ -210,22 +304,43 @@ const Contact = () => {
                 <option>Pharmacy Assistance</option>
               </select>
               <input
-                type="text"
-                placeholder="dd/mm/yyyy"
+                type="date"
+                name="date"
+                value={form.date}
+                onChange={handleChange}
+                placeholder="Select Date"
                 className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white"
+                min={new Date().toISOString().split("T")[0]}
+                required
               />
             </div>
             <textarea
               rows={4}
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Your Message (Optional)"
               className="w-full border border-green-600 rounded-lg px-4 py-2 text-lg text-green-600 focus:outline-none focus:border-green-600 bg-white resize-none"
             />
             <button
               type="submit"
-              className="block w-full bg-green-600 hover:bg-green-600 text-white text-lg font-semibold py-3 rounded-lg transition"
+              disabled={submitStatus.loading}
+              className={`block w-full bg-green-600 hover:bg-green-600 text-white text-lg font-semibold py-3 rounded-lg transition ${
+                submitStatus.loading ? "opacity-60 cursor-not-allowed" : ""
+              }`}
             >
-              Book Service
+              {submitStatus.loading ? "Booking..." : "Book Service"}
             </button>
+            {submitStatus.success && (
+              <div className="mt-2 text-green-700 bg-green-100 border border-green-300 rounded px-3 py-2">
+                {submitStatus.success}
+              </div>
+            )}
+            {submitStatus.error && (
+              <div className="mt-2 text-red-700 bg-red-100 border border-red-300 rounded px-3 py-2">
+                {submitStatus.error}
+              </div>
+            )}
           </form>
         </div>
       </div>
@@ -248,3 +363,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
